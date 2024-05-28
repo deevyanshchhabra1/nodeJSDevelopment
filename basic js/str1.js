@@ -118,3 +118,40 @@ console.log(isInclude1);
 const isInclude2 = myText3.includes("D",8) 
 console.log(isInclude2);
 
+// COBVERTING DIFFERENT DATATYPE TO STRING
+
+// 1. converting no to string
+
+const num = 42;
+const strNum = String(num);  // converting number to string
+
+console.log(typeof strNum+strNum)  // output is String42 as typeof strNum would return string
+console.log(strNum+strNum) // would return 4242 as string concatenation
+
+// 2. converting boolean to string
+const boolVal = true;
+const strBool = String(boolVal);
+console.log(typeof(strBool))
+console.log(typeof boolVal)
+
+// 3. converting array to string
+const arr = [1,2,3,4];
+const strArr1 = String(arr);
+console.log(strArr1)
+console.log(typeof(strArr1))
+console.log(typeof arr)
+
+// 4. converting object to string
+const obj = {a:1,b:2} 
+const strObj = String(obj);
+console.log(strObj)/*The code you’ve provided will log the following output to the console:
+[object Object]
+Here’s why:
+You’ve defined an object obj with two properties: a and b.
+When you convert this object to a string using String(obj), JavaScript implicitly calls the toString() method on the object.
+The default implementation of toString() for objects returns the string [object Object].
+So, the console.log(strObj) statement will print [object Object] to the console. If you want to display the actual contents of the object, you’ll need to access its properties explicitly (e.g., console.log(obj.a) or console.log(obj.b)). 😊
+ */
+console.log(typeof(strObj))
+console.log(typeof obj) 
+
